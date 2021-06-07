@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<div class="comment-list">
+		<ul class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
@@ -57,7 +57,7 @@ if ( post_password_required() ) {
 				)
 			);
 			?>
-		</div><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();

@@ -889,6 +889,7 @@ nav li a:hover {
 
 .comment-list {
     margin-bottom:4rem;
+    margin-left:0;
 }
 
 .comment-list article {
