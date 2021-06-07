@@ -88,7 +88,6 @@ main {
 hr {
 	box-sizing: content-box;
 	height: 0;
-	overflow: visible;
 }
 
 /**
@@ -108,6 +107,7 @@ pre {
  */
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 /**
@@ -198,10 +198,6 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-button,
-input {
-	overflow: visible;
-}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -361,14 +357,15 @@ template {
 
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+html {
+	box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
-}
-
-html {
-	box-sizing: border-box;
 }
 
 /*--------------------------------------------------------------
@@ -379,6 +376,8 @@ html {
 --------------------------------------------- */
 html {
 	font-size: 62.5%; /* 1rem = 10px */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -391,6 +390,7 @@ textarea {
 	font-family: 'lora', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
 	line-height: 1.625;
 	font-size:2rem;
+	overflow-x: hidden;
 }
 
 h1,
@@ -402,11 +402,11 @@ h6 {
 	clear: both;
 	font-family: 'oswald', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
 	font-weight:normal;
-	margin: 1.5rem 0 2rem;
+	margin: 0 0 2rem;
 }
 
 p {
-	margin-bottom: 1.5rem;
+	margin: 0 0 1.5rem;
 	font-size:1.8rem;
 }
 
@@ -508,10 +508,11 @@ object {
 img {
 	height: auto;
 	max-width: 100%;
+	display: block;
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 }
 
 table {
@@ -521,6 +522,10 @@ table {
 
 /* Links
 --------------------------------------------- */
+a {
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
 a, a:visited {
 	color: #9b4a2f;
 }
@@ -728,7 +733,7 @@ textarea {
 /* Widgets
 --------------------------------------------- */
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 4rem;
 }
 
 .widget select {
@@ -895,5 +900,4 @@ textarea {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 1.5em;
 }

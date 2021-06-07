@@ -7,6 +7,7 @@
  ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 	const mobileMenu = document.getElementById( 'mobile-menu' );
+	const mobileMenuInner = document.getElementsByClassName( "menu-modal-inner");
 	const htmlTag = document.getElementsByTagName('html')[0];
 	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
 	const closeButton = mobileMenu.getElementsByTagName('button')[0];
@@ -43,6 +44,15 @@
 		htmlTag.classList.toggle( 'html-position' );
 
 	} );
+
+	// Remove the .show-menu class and set aria-expanded to false when the menu is not the target
+	mobileMenu.addEventListener('click', function(event) {
+		if(mobileMenuInner[0] !== event.target && !mobileMenuInner[0].contains(event.target)  ) {
+			mobileMenu.classList.toggle( 'show-menu' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			htmlTag.classList.toggle( 'html-position' );
+		}
+	});
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
@@ -95,12 +105,16 @@
 		searchButton[0].addEventListener( 'click', function() {
 			searchModal.classList.toggle( 'show-search-modal' );
 			htmlTag.classList.toggle( 'html-position' );
+			searchInput[0].focus();
+			
 		} );
 
 		// open search (desktop)
 		searchButton[1].addEventListener( 'click', function() {
 			searchModal.classList.toggle( 'show-search-modal' );
 			htmlTag.classList.toggle( 'html-position' );
+			searchInput[0].focus();
+
 		} );
 	
 		// close search

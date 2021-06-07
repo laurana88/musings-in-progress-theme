@@ -2,7 +2,7 @@ const nav = document.getElementById("genesis-nav-primary");
 const searchIcon = document.querySelector("li.menu-item.search");
 const popup = document.getElementsByClassName("laura_search_popup_box");
 const searchForm = document.getElementsByClassName("search-form");
-const searchInput = document.getElementsByClassName("search-form-input");
+const searchInput = document.getElementsByClassName("search-field");
 
 // open search
 const searchSite = (event) =>  {

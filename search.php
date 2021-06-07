@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-
+	<div class="content-wrap-wide">
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -22,6 +22,7 @@ get_header();
 					?>
 				</h1>
 			</header><!-- .page-header -->
+			<div class="list-posts-search">
 
 			<?php
 			/* Start the Loop */
@@ -37,7 +38,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			// the_posts_navigation();
 
 		else :
 
@@ -45,9 +46,15 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
+			<?php
+				the_posts_pagination( array( 
+					'prev_text' => '« Previous', 
+					'next_text' => 'Next »',
+				) );
+			?>	
 	</main><!-- #main -->
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

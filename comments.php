@@ -18,6 +18,7 @@
 if ( post_password_required() ) {
 	return;
 }
+
 ?>
 
 <div id="comments" class="comments-area">
@@ -26,7 +27,7 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title laura-marginbottomzero">
 			<?php
 			$musingsofarover_comment_count = get_comments_number();
 			if ( '1' === $musingsofarover_comment_count ) {
@@ -48,16 +49,15 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
+		<div class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'walker'      => new Musings_Walker_Comment(),
 				)
 			);
 			?>
-		</ol><!-- .comment-list -->
+		</div><!-- .comment-list -->
 
 		<?php
 		the_comments_navigation();
@@ -70,6 +70,15 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
+
+	// Remove website field from comment form
+	function remove_website_field($fields) {
+		unset($fields['url']);
+		return $fields;
+	}
+	 
+	add_filter('comment_form_default_fields', 'remove_website_field');
+	
 
 	comment_form();
 	?>
