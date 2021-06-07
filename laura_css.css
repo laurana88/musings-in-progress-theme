@@ -321,6 +321,7 @@ nav li a:hover {
     background: #fff;
     display: flex;
     width: 100%;
+    overflow-y: scroll;
 }
 
 @media (min-width: 1000px) {
@@ -826,6 +827,13 @@ nav li a:hover {
     height: 100%;
 }
 
+/* Caption */
+
+figcaption {
+    font-style: italic;
+    font-size: 1rem!important;
+}
+
 /* Pinterest image */
 
 .scriptless__pinterest-image {
@@ -885,6 +893,7 @@ nav li a:hover {
 
 #comments * {
     list-style:none;
+    max-width: 100%;
 }
 
 .comment-list {
@@ -1254,8 +1263,8 @@ aside #media_image-2 img {
     top: -47.5px;  /* Fontsize of 5rem */
 }
 
-.laura-covertransparent:hover mark {
-    background: transparent!important;
+.laura-darkbackground {
+    background-color: rgba(0,0,0,.5);
 }
 
 .top5 {
