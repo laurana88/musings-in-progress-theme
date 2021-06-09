@@ -827,11 +827,42 @@ nav li a:hover {
     height: 100%;
 }
 
+/* Table of Contents */
+
+.tableofcontents {
+    margin: 2rem 0;
+    padding: 5%;
+    border: #737373 1px solid;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    color: #737373;
+    font-size:95%;
+}
+
+.tableofcontents ul, .tableofcontents ol {
+    margin-left:0;
+    margin-bottom:0;
+}
+
+.tableofcontents a {
+    color: #737373;
+}
+
+.tableofcontents a:hover {
+    text-decoration: underline;
+    color: #608769;
+}
+
+.simpletoc-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
 /* Caption */
 
 figcaption {
     font-style: italic;
-    font-size: 1rem!important;
+    font-size: 1.5rem!important;
 }
 
 /* Pinterest image */
@@ -1721,4 +1752,16 @@ padding: 30px 50px!important;
 
 .laura-transition * {
     transition: all .5s;
+}
+
+/* Symbol */
+
+.laurasymbol p {
+    font-size: 16px !important;
+    font-style: italic !important;
+    margin-bottom: 10px !important;
+}
+
+.lauragreenvillemedia {
+    margin-bottom: 30px;
 }

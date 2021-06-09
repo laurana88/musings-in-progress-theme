@@ -28,9 +28,17 @@ get_header();
 			<div class="post-featured-image">
 				<picture>
 					<?php 
-					the_post_thumbnail('small-featured', array(
-						'class' => 'low-res'
-					)); 
+
+					//low res image - loads first
+					$featured_image = get_post_thumbnail_id();
+					$size = 'small-featured';
+					$imageurl = wp_get_attachment_image_src( $featured_image, $size);
+					$alt = get_post_meta($featured_image, '_wp_attachment_image_alt', true);
+					?>
+                    <img src="<?php echo $imageurl[0]; ?>" class="low-res" width="50" height="33" alt="<?php echo $alt; ?>"/>
+                    <?php
+
+					//high res image - loads second
 					the_post_thumbnail( 'large', array(
 						'class' => 'high-res',
 						'onload' => 'this.classList.add("image-loaded")'
