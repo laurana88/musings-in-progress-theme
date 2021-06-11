@@ -151,7 +151,7 @@ add_action( 'widgets_init', 'musingsofarover_widgets_init' );
 function musingsofarover_scripts() {
 	wp_enqueue_style( 'musingsofarover-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'laura-custom-styles', get_stylesheet_directory_uri() . '/laura_css.css');
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;700&display=swap');
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 	wp_enqueue_script( 'musingsofarover-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

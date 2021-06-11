@@ -36,7 +36,7 @@
 
 
 		<div class="site-branding">
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 		</div><!-- .site-branding -->
 
 		<div class="header-navigation-wrapper">
