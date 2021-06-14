@@ -17,13 +17,15 @@ get_header();
 		?>
 		<div class="post-header-wrapper" >
 			<header class="entry-header">
-				<div class="entry-taxonomies">
-					<?php musingsofarover_entry_footer(); ?>
-				</div><!-- .entry-taxonomies -->
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); 
-				the_excerpt();
-				?>
-				<span class="updated-date"><?php printf( __( 'Updated in %s', 'textdomain' ), get_the_modified_date() ); ?></span>
+				<div class="post-meta">
+					<div class="entry-taxonomies">
+						<?php musingsofarover_entry_footer(); ?>
+					</div><!-- .entry-taxonomies -->
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); 
+					the_excerpt();
+					?>
+					<span class="updated-date"><?php printf( __( 'Updated in %s', 'textdomain' ), get_the_modified_date() ); ?></span>
+				</div>
 			</header><!-- .entry-header -->
 			<div class="post-featured-image">
 				<picture>
