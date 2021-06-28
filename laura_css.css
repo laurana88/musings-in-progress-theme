@@ -42,7 +42,6 @@
 ---- AFFILIATE
 ---- READ NEXT
 ---- IMAGE ZOOM
----- HR
 -- SHORTCODES
 */
 
@@ -1475,10 +1474,6 @@ aside #media_image-2 img {
 	margin-bottom: 0px!important;
 }
 
-.laura-margintopzero {
-	margin-top: 0px!important;
-}
-
 .laura-padding {
 padding: 1px 20px;
 }
@@ -1495,10 +1490,6 @@ padding: 30px 50px!important;
 .laura-smallcolumn .wp-block-column:not(:first-child) {
 	margin-left: 10px;
     }
-}
-
-.laura-marginzero {
-    margin: 0;
 }
 
 /* Trail Guide */
@@ -1737,16 +1728,6 @@ padding: 30px 50px!important;
 
 .laura-imagezoom:hover img {
     transform: scale(1.03);
-}
-
-/* HR */
-
-hr.is-style-default, .wp-block-separator {
-    width: 33%
-}
-
-hr.is-style-wide {
-    width: 100%;
 }
 
 /* SHORTCODES */
