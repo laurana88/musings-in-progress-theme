@@ -772,12 +772,39 @@ nav li a:hover {
 
 .post-header-wrapper header {
     padding:5%;
+    min-height:75vh;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width:700px) {
+    .post-header-wrapper header {
+        min-height:auto;
+        display:block;
+    }
 }
 
 @media (min-width:1000px) {
     .post-header-wrapper header {
         padding-left:10%;
         width:55%;
+    }
+}
+
+.post-arrow {
+    justify-content: center;
+    display: flex;
+    animation-name: home-arrow;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@media (min-width:700px) {
+    .post-arrow {
+        display:none;
     }
 }
 
@@ -1474,6 +1501,14 @@ aside #media_image-2 img {
 	margin-bottom: 0px!important;
 }
 
+.laura-margintopzero {
+    margin-top: 0px!important;
+}
+
+.laura-marginzero {
+    margin: 0;
+}
+
 .laura-padding {
 padding: 1px 20px;
 }
@@ -1729,6 +1764,17 @@ padding: 30px 50px!important;
 .laura-imagezoom:hover img {
     transform: scale(1.03);
 }
+
+/* HR */
+
+hr.is-style-default, .wp-block-separator {
+    width: 33%
+}
+
+hr.is-style-wide {
+    width: 100%;
+}
+
 
 /* SHORTCODES */
 
