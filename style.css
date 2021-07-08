@@ -408,7 +408,20 @@ textarea {
 	overflow-x: hidden;
 }
 
-h1,
+h1 {
+	font-family: system-ui, Tahoma, sans-serif;
+	font-weight: 700;
+	clear: both;
+	margin: 0 0 2rem;
+}
+
+@media (min-width:700px) {
+	h1 {
+		font-family: 'oswald', Tahoma, sans-serif;
+		font-weight: normal;
+	}
+}
+
 h2,
 h3,
 h4,

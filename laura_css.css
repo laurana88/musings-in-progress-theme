@@ -772,7 +772,7 @@ nav li a:hover {
 
 .post-header-wrapper header {
     padding:5%;
-    min-height:75vh;
+    min-height:90vh;
     display:flex;
     justify-content: space-between;
     flex-direction: column;
@@ -1022,15 +1022,15 @@ figcaption {
 }
 
 .high-res {
-    opacity:0;
+    /* opacity:0; 
+    transition: opacity .25s; */
     position:relative;
-    transition: opacity .25s;
     z-index: 2;
 }
-
+/* 
 .high-res.image-loaded {
     opacity: 1;
-}
+} */
 
 .page-header-wrapper .header-image-present .entry-header {
     position: absolute;
@@ -1357,6 +1357,8 @@ aside #media_image-2 img {
     text-align: center;
     font-size: 6rem;
     text-transform: uppercase;
+    font-family: 'oswald', Tahoma, sans-serif;
+    font-weight: normal;
 }
 
 .archive-description {
