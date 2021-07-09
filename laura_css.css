@@ -772,7 +772,7 @@ nav li a:hover {
 
 .post-header-wrapper header {
     padding:5%;
-    min-height:90vh;
+    min-height:85vh;
     display:flex;
     justify-content: space-between;
     flex-direction: column;
