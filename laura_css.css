@@ -571,7 +571,7 @@ nav li a:hover {
     align-items: center;
     flex-direction: column;
     padding: 6rem 10%;
-    min-height: 250px;
+    min-height: 300px;
 }
 
 @media (min-width:700px) {
@@ -583,6 +583,14 @@ nav li a:hover {
     }
 }
 
+.social-links {
+    text-align: center;
+}
+
+.site-by p {
+    font-size: 1.4rem;
+}
+
 .footer-menu {
     font-size: 1.4rem;
     text-align: right;
@@ -590,11 +598,11 @@ nav li a:hover {
 }
 
 .laura-copyright span {
-	text-align: center;
+	text-align: left;
 	color: #fff;
 	font-size: 14px;
     display: block;
-    padding: 0 10px;
+    padding: 0 10px 3px;
 }
 
 /* ## SUBSCRIBE FORM
