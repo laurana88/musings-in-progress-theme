@@ -1762,6 +1762,22 @@ padding: 30px 50px!important;
 .wp-block-laura-readnext::before {
     content: "Read Next: ";
 }
+.readnext2 {
+    padding: 30px;
+    border: #ccc solid .2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.readnext2::before {
+    content: "Read More";
+    top: -19px;
+    position:absolute;
+    font-family: "Oswald", sans-serif;
+    background:white;
+    padding: 0 10px;
+    left: 20px;
+}
 
 /* IMAGE ZOOM */
 
