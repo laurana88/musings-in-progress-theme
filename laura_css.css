@@ -1767,6 +1767,7 @@ padding: 30px 50px!important;
     border: #ccc solid .2rem;
     font-weight: bold;
     position: relative;
+    margin: 30px 0;
 }
 
 .readnext2::before {
