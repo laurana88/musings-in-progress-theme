@@ -42,6 +42,8 @@
 ---- AFFILIATE
 ---- READ NEXT
 ---- IMAGE ZOOM
+---- HR
+---- MEDIA & TEXT
 -- SHORTCODES
 */
 
@@ -1784,6 +1786,18 @@ hr.is-style-default, .wp-block-separator {
 hr.is-style-wide {
     width: 100%;
 }
+
+/* Media & Text */
+
+@media (max-width:600px){
+    .image-last .wp-block-media-text__media {
+        grid-row:2!important;
+    }
+    .image-last .wp-block-media-text__content {
+        grid-row:1!important;
+    }
+}
+
 
 
 /* SHORTCODES */
